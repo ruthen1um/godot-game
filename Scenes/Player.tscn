@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://djrjeyh3a6et3"]
+
+[ext_resource type="Script" uid="uid://dmxwdbe1jnq0j" path="res://Scripts/Player.cs" id="1_rpqav"]
+[ext_resource type="PackedScene" uid="uid://dwwvw11g5ubh2" path="res://Scenes/SoundSphere.tscn" id="2_kyqiw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbkls"]
+size = Vector3(1, 2, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=554426337]
+script = ExtResource("1_rpqav")
+MoveSpeed = 5.0
+RotationSpeed = 2.0
+SpawnDistance = 2.0
+ObjectScene = ExtResource("2_kyqiw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=100229832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_qbkls")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=716596939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)

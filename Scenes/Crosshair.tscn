@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bptl63qnfwlmo"]
+
+[ext_resource type="Script" uid="uid://dyaa1pdbc3oud" path="res://Scripts/Crosshair.cs" id="1_ngi2y"]
+
+[node name="Crosshair" type="Control" unique_id=1783745472]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ngi2y")
