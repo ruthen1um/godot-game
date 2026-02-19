@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://buu0ointtok0u"]
+
+[ext_resource type="PackedScene" uid="uid://djrjeyh3a6et3" path="res://Scenes/Player.tscn" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://bptl63qnfwlmo" path="res://Scenes/Crosshair.tscn" id="3_pbw6q"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r0du0"]
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.6814234, 0.6814234, 0.6814234, 1)
+ground_curve = 0.013660339
+energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_cm0pq"]
+sky_material = SubResource("ProceduralSkyMaterial_r0du0")
+
+[sub_resource type="Environment" id="Environment_r0du0"]
+background_mode = 2
+sky = SubResource("Sky_cm0pq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r0du0"]
+
+[node name="Main" type="Node3D" unique_id=1732033609]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=855545927]
+environment = SubResource("Environment_r0du0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1768857675]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_r0du0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062690242]
+
+[node name="Crosshair" parent="CanvasLayer" unique_id=1783745472 instance=ExtResource("3_pbw6q")]
+
+[node name="Player" parent="." unique_id=554426337 instance=ExtResource("2_idj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0066156387, -1.1920929e-07, 0.0019658804)

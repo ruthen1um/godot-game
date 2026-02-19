@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dwwvw11g5ubh2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jwvh2"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_jwvh2"]
+
+[sub_resource type="Skin" id="Skin_jwvh2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwvh2"]
+albedo_color = Color(1, 1, 1, 0)
+emission_enabled = true
+emission = Color(0.6745098, 0.5764706, 0.75686276, 1)
+anisotropy = 1.0
+
+[node name="SoundSphere" type="Area3D" unique_id=447546652]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1932667988]
+shape = SubResource("SphereShape3D_jwvh2")
+debug_color = Color(0.8901961, 0, 0, 0.83137256)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=165031041]
+mesh = SubResource("SphereMesh_jwvh2")
+skin = SubResource("Skin_jwvh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_jwvh2")
